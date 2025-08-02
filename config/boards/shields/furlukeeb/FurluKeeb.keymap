@@ -8,31 +8,48 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            bindings = <
-                &kp ESC     &kp FR_AMPR     &kp FR_EACU     &kp FR_DQUO     &kp FR_QUOT &kp FR_LPRN                     &kp FR_MINS     &kp FR_EGRV  &kp FR_UNDS  &kp FR_CCED  &kp FR_AGRV  &kp BSPC                    
-                &kp TAB     &kp A           &kp Z           &kp E           &kp R       &kp T                           &kp Y           &kp U        &kp I        &kp O        &kp P        &kp DEL
-                &kp LSHIFT  &kp Q           &kp S           &kp D           &kp F       &kp G                           &kp H           &kp J        &kp K        &kp L        &kp SEMI     &kp RALT
-                &kp LCTRL   &kp W           &kp X           &kp C           &kp V       &kp B                           &kp N           &kp FR_COMM  &kp FR_SCLN  &kp FR_COLN  &kp FR_EXLM  &kp ESC
-                            &kp LGUI                        &kp ENTER       &kp TAB     &mo 1                           &mo 2           &kp SPACE    &kp SPACE                 &kp RALT
+            bindings = <            
+                &kp ESC     &kp FR_AMPR     &kp FR_EACU     &kp FR_DQUO     &kp FR_QUOT     &kp FR_LPRN                                        &kp FR_MINS     &kp FR_EGRV      &kp FR_UNDS     &kp FR_CCED         &kp FR_AGRV         &kp BSPC                    
+                &kp TAB     &kp Q           &kp W           &kp E           &kp R           &kp T                                              &kp Y           &kp U            &kp I           &kp O               &kp P               &kp DEL
+                &kp LSHIFT  &kp A           &kp S           &kp D           &kp F           &kp G                                              &kp H           &kp J            &kp K           &kp L               &kp SEMI            &kp ENTER
+                &kp LCTRL   &kp Z           &kp X           &kp C           &kp V           &kp B                                              &kp N           &kp FR_COMM      &kp FR_SCLN     &kp FR_COLN         &kp FR_EXLM         &kp ENTER
+                                            &kp LGUI                        &kp LALT        &mo 1           &mt LSHIFT SPACE    &kp SPACE      &mo 2           &caps_word                       &kp RALT        
+                >;                      
+        };                      
+        num_pad {                       
+            bindings = <                        
+                &PSCRN      &kp F1          &kp F2          &kp F3      &kp F4              &kp F5                                             &kp KP_NLCK     &none            &kp KP_SLASH    &kp KP_ASTERISK     &kp KP_MINUS        &trans                    
+                &trans      &kp F6          &kp F7          &kp F8      &kp F9              &kp F10                                            &none           &kp KP_N7        &kp KP_N8       &kp KP_N9           &kp KP_PLUS         &trans
+                &trans      &none           &none           &kp D       &kp F11             &kp F12                                            &kp EQUAL       &kp KP_N4        &kp KP_N5       &kp KP_N6           &kp KP_PLUS         &trans
+                &trans      &none           &none           &none       &kp NUBS            &kp LS(NUBS)                                       &kp EQUAL       &kp KP_N1        &kp KP_N2       &kp KP_N3           &kp KP_ENTER        &trans
+                                            &kp LGUI                    &trans              &kp ENTER       &none                &kp SPACE     &kp KP_N0       &kp KP_N0                        &kp KP_DOT   
+                >;
+        };              
+        symbols {               
+            bindings = <                
+                &trans      &kp FR_SUP2     &kp FR_HASH     &none           &kp FR_PERC     &kp FR_PIPE                                         &none          &none            &none           &kp SCROLLLOCK      &kp PAUSE_BREAK     &kp PSCRN                    
+                &trans      &kp FR_AT       &none           &kp FR_CIRC     &kp FR_DIAE     &kp FR_UGRV                                         &none          &none            &none           &none               &none               &none
+                &trans      &kp FR_AGRV     &kp FR_BSLS     &kp FR_SLSH     &kp FR_LPRN     &kp FR_RPRN                                         &kp PAGE_UP    &kp HOME         &kp UP          &kp END             &kp FR_UGRV         &none
+                &trans      &kp FR_LCBR     &kp FR_RCBR     &kp FR_CCED     &kp FR_LBRC     &kp FR_RBRC                                         &kp PAGE_DOWN  &kp LEFT         &kp DOWN        &kp RIGHT           &none               &none
+                                            &kp LGUI                        &mo 1           &kp ENTER       &mo 1                &kp RSHIFT     &kp SPACE      &none                            &kp RALT
+                >;              
+        };                      
+        adjust {                
+            bindings = <                
+                &none       &none           &none           &none           &none           &bt BT_SEL 0                                        &bootloader     &none           &none           &none               &none               &none                    
+                &none       &none           &none           &none           &none           &bt BT_SEL 1                                        &none           &none           &none           &none               &none               &none
+                &none       &none           &none           &none           &none           &bt BT_SEL 2                                        &none           &none           &none           &none               &none               &none
+                &none       &none           &none           &none           &none           &bt BT_CLR                                          &none           &none           &none           &none               &none               &none
+                                            &studio_unlock                  &none           &none           &none                &none          &none           &none           &none
                 >;
         };
-        lower_layer {
-            bindings = <
-                &kp ESC      &kp FR_AMPR    &kp FR_EACU     &kp FR_DQUO     &kp FR_QUOT &bt BT_SEL 0                    &kp FR_MINS     &kp FR_EGRV  &kp FR_UNDS  &kp FR_CCED  &kp FR_AGRV  &kp BSPC                    
-                &kp TAB      &kp A          &kp Z           &kp E           &kp R       &bt BT_SEL 1                    &kp Y           &kp U        &kp I        &kp O        &kp P        &kp DEL
-                &kp LSHIFT   &kp Q          &kp S           &kp D           &kp F       &bt BT_SEL 2                    &kp H           &kp J        &kp K        &kp L        &kp SEMI     &kp RALT
-                &kp LCTRL    &kp W          &kp X           &kp C           &kp V       &bt BT_CLR                      &kp N           &kp FR_COMM  &kp FR_SCLN  &kp FR_COLN  &kp FR_EXLM  &kp ESC
-                             &kp LGUI                       &kp ENTER       &bootloader &mo 1                           &mo 2           &kp SPACE    &kp SPACE                 &kp RALT
-                >;
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
-        raise_layer {
-            bindings = <
-                &kp ESC      &kp FR_AMPR    &kp FR_EACU     &kp FR_DQUO     &kp FR_QUOT &bt BT_SEL 0                    &bt BT_SEL 0    &kp FR_EGRV  &kp FR_UNDS  &kp FR_CCED  &kp FR_AGRV  &kp BSPC                   
-                &kp TAB      &kp A          &kp Z           &kp E           &kp R       &bt BT_SEL 1                    &bt BT_SEL 1    &kp U        &kp I        &kp O        &kp P        &kp DEL
-                &kp LSHIFT   &kp Q          &kp S           &kp D           &kp F       &bt BT_SEL 2                    &bt BT_SEL 2    &kp J        &kp K        &kp L        &kp SEMI     &kp RALT
-                &kp LCTRL    &kp W          &kp X           &kp C           &kp V       &bt BT_CLR                      &kp N           &kp FR_COMM  &kp FR_SCLN  &kp FR_COLN  &kp FR_EXLM  &kp ESC
-                             &kp LGUI                       &kp ENTER       &bootloader &mo 1                           &mo 2           &bt BT_CLR   &kp SPACE                 &kp RALT
-                >;
-        };      
     };
 };

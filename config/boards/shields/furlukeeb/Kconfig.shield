@@ -1,8 +1,2 @@
-config SHIELD_FURLUKEEB_DONGLE
+config SHIELD_MY_KEYBOARD_DONGLE
     def_bool $(shields_list_contains,FurluKeeb_dongle)
-
-config SHIELD_FURLUKEEB_LEFT
-    def_bool $(shields_list_contains,FurluKeeb_left)
-
-config SHIELD_FURLUKEEB_RIGHT
-    def_bool $(shields_list_contains,FurluKeeb_right)
