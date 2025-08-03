@@ -2,6 +2,7 @@ if SHIELD_FURLUKEEB_DONGLE
 
 # Max 16 characters in keyboard name
 config ZMK_FURLUKEEB
+    string
     default "FurluKeeb"
 
 config ZMK_SPLIT_ROLE_CENTRAL
