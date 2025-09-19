@@ -24,4 +24,19 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 3
 
+config ZMK_USB
+    default y
+
+config USB_DEVICE_STACK
+    default y
+
+config USB_HID_DEVICE
+    default y
+
+config ZMK_HID
+    default y
+
+config ZMK_USB_ROLE_HID
+    default y
+
 endif
