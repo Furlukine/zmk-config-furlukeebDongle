@@ -30,7 +30,7 @@
                 &trans      &kp FR_SUP2     &kp FR_HASH     &none           &kp FR_PERC     &kp FR_PIPE                                         &none          &none            &none           &kp SCROLLLOCK      &kp PAUSE_BREAK     &kp PSCRN                    
                 &trans      &kp FR_AT       &none           &kp FR_CIRC     &kp FR_DIAE     &kp FR_UGRV                                         &none          &none            &none           &none               &none               &none
                 &trans      &kp FR_AGRV     &kp FR_BSLS     &kp FR_SLSH     &kp FR_LPRN     &kp FR_RPRN                                         &kp PAGE_UP    &kp HOME         &kp UP          &kp END             &kp FR_UGRV         &none
-                &trans      &kp FR_LCBR     &kp FR_RCBR     &kp FR_CCED     &kp FR_LBRC     &kp FR_RBRC                                         &kp PAGE_DOWN  &kp LEFT         &kp DOWN        &kp RIGHT           &none               &none
+                &trans      &kp FR_LCBR     &kp FR_RCBR     &kp FR_CCED     &kp FR_LBRC     &kp FR_RBRC                                         &kp PAGE_DOWN  &kp LEFT         &kp DOWN        &kp RIGHT           &none               &kp LC(LA(DEL))
                                             &kp LGUI                        &mo 1           &kp ENTER       &mo 1                &kp RSHIFT     &kp SPACE      &none                            &kp RALT
                 >;              
         };                      
